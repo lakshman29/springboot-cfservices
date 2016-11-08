@@ -6,7 +6,7 @@ import static springfox.documentation.schema.AlternateTypeRules.newRule;
 import java.time.LocalDate;
 import java.util.List;
 
-import org.h2.server.web.WebServlet;
+//import org.h2.server.web.WebServlet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -47,13 +47,13 @@ public class AccountsApplication /*extends SpringBootServletInitializer*/{
     public static void main(String[] args) {
         SpringApplication.run(AccountsApplication.class, args);
     }
-    @Profile("local")
+    /*@Profile("local")
     @Bean
     public ServletRegistrationBean h2servletRegistration() {
         ServletRegistrationBean registration = new ServletRegistrationBean(new WebServlet());
         registration.addUrlMappings("/console/*");
         return registration;
-    }
+    }*/
     
    /* @Bean
     public Docket newsApi() {
