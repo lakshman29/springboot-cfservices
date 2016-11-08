@@ -98,8 +98,8 @@ public class AuthenticationController {
 		logger.debug("AuthenticationController.sendMail: mail request from: " + from+"to :"+to);
 		String username=System.getenv("vcap.services.sendgrid.credentials.username");
 		String password=System.getenv("vcap.services.sendgrid.credentials.password");
-		//SendGrid sendGrid = new SendGrid("Re38yKvMlS", "VNwax4XTZSwp5272");
-		SendGrid sendGrid = new SendGrid(username, password);
+		SendGrid sendGrid = new SendGrid("TqEs6wy0mT","MaUiqBXQ1RUB9091");
+		//SendGrid sendGrid = new SendGrid(username, password);
 		SendGrid.Email email = new SendGrid.Email();
 		
 		email.addTo(to);
