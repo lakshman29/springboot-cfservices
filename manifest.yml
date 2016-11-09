@@ -10,6 +10,6 @@ applications:
   #random-route: true
   host: app-host
   domain: cfapps.io
-  path: target/*.jar
+  path: target/app-project.jar
   services: [app-service]
   
