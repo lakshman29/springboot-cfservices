@@ -6,10 +6,12 @@ env:
     SPRING_PROFILES_DEFAULT: cloud
     
 applications:
-- name: app-name
+#- name: app-name
+- name: spring-mkplace-rsmr
   #random-route: true
-  host: app-host
+  #host: app-host
   domain: cfapps.io
   path: target/app-project
-  services: [app-service]
+  #services: [app-service]
+  services: [mysql,rabbitmq,sendgrid] 
   
