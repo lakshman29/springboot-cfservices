@@ -9,7 +9,7 @@ env:
     
 applications:
 #- name: app-name
-- name: spring-mkplace-rsmr
+- name: spring-mkplace-host
   #random-route: true
   #host: app-host
   domain: cfapps.io
