@@ -13,7 +13,7 @@ applications:
   #random-route: true
   #host: app-host
   domain: cfapps.io
-  path: target/app-project
+  path: ../target/app-project
   #services: [app-service]
   services: [mysql,rabbitmq,sendgrid] 
   
