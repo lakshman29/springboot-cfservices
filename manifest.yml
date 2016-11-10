@@ -1,7 +1,9 @@
 ---
 timeouut: 180
-instances: app-instance
-memory: app-memory
+#instances: app-instance
+instances: 1
+#memory: app-memory
+memory: 1GB
 env:
     SPRING_PROFILES_DEFAULT: cloud
     
