@@ -1,0 +1,18 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+  # repository: "9952627133/java-maven"
+    repository: "192.168.94.86:5000/def/java-maven"
+    insecure_registries: ["192.168.94.86:5000"]
+
+inputs:
+  - name: source-code
+
+outputs:
+  - name: build-output
+
+run:
+  path: source-code/ci/build.sh
