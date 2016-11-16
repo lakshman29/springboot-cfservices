@@ -6,6 +6,7 @@ import com.def.accounts.exceptions.AuthenticationException;
 import com.def.accounts.services.AccountService;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sendgrid.SendGrid;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -35,7 +36,8 @@ public class AuthenticationControllerTest {
 	
 	@Mock
 	AccountService service;
-	
+	@Mock
+	SendGrid sendGrid;
 	@Before
 	public void setup() {
 		MockitoAnnotations.initMocks(this);
@@ -105,15 +107,6 @@ public class AuthenticationControllerTest {
         return mapper.writeValueAsBytes(request);
 	}
 	
-	@Test
 	
-	public void doSendMailTest() throws Exception{
-		mockMvc.perform(post("/sendMail").param("from", "lakshman29@gmail.com").
-				param("to", "lakshman.rengarajan@altimetrik.com").param("subject", "testsendmail")
-				.content("welcome to sendmail service"))
-		//.andExpect(status().isOk())
-		.andDo(print());
-		
-	}
 	
 }
